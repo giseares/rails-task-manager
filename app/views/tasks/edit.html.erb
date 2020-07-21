@@ -1,9 +1,12 @@
-<h1> 🗨Crear una nueva tarea:</h1>
+<h1> EDITAR </h1>
+
 <%= form_for(@task) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :details %>
   <%= f.text_area :details %>
+  <%= f.check_box :completed %>
+  <%= f.label :completed, "completed" %>
   <%= f.submit %>
 <% end %>
 

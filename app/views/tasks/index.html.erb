@@ -1,0 +1,12 @@
+<h1>Mis tareas</h1>
+<p>Lista de Tareas pendientes</p>
+
+<ul>
+  <% @tasks.each do |task|%>
+  <li> <%= check_box("tag", tag.id, {checked:task.completed}) %>  <%= link_to task.title, task_path(task.id) %> <%= link_to "Eliminar", task_path(@task), method: :delete, data: { confirm: "Esta seguro"}%>
+  <% end %>
+</li>
+</ul>
+
+<%= link_to "➕add a new task", new_task_path %> 
+
